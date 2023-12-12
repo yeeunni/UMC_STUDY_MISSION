@@ -7,6 +7,7 @@ import umc.study.domain.common.BaseEntity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "food_category")
 @Getter
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)

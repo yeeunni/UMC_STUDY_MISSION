@@ -3,6 +3,7 @@ import lombok.*;
 
 import lombok.Builder;
 import lombok.Getter;
+import org.hibernate.annotations.ColumnDefault;
 import umc.study.domain.common.BaseEntity;
 import javax.persistence.*;
 
@@ -23,7 +24,7 @@ public class Store extends BaseEntity {
     @Column(nullable = false, length = 50)
     private String address;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "FLOAT DEFAULT 0.0")
     private Float score;
 
     @ManyToOne(fetch = FetchType.LAZY)
